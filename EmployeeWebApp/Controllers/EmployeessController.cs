@@ -20,6 +20,11 @@ namespace EmployeeWebApp.Controllers
             return View(db.employees.ToList());
         }
 
+        public ActionResult Sample()
+        {
+            return View();
+        }
+
         // GET: Employeess/Details/5
         public ActionResult Details(int? id)
         {
