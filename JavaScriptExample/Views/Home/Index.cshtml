@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<div class="form-group">
+
+    <form id="EmployeeForm">
+
+        <div class="form-group">
+            <label for="Id">ID</label>
+            <input type="number" placeholder="Enter employee id" id="Id" name="Id" />
+            <span class="error" style="color:green" id="IdError"></span>
+        </div>
+
+        <div class="form-group">
+            <lable for="EmployeeName">Name</lable>
+            <input type="text" placeholder="Enter employee name" id="EmployeeName" name="EmployeeName" />
+            <span class="error" style="color:red" id="NameError"></span>
+        </div>
+
+        <div class="form-group>
+            <lable for="Department">Department</lable>
+            <input type="text" placeholder="Enter department" id="Department" name="Department" />
+            <span class="error" style="color:yellow" id="DepartmentError"></span>
+        </div>
+
+        <div class="form-group">
+            <lable for="Salary">Salary</lable>
+            <input type="number" placeholder="Enter salary" id="Salary" name="Salary" />
+            <span class="error" style="color:deeppink" id="SlaryError"></span>
+        </div>
+
+        <div class="form-group">
+            <lable for="Age">Age</lable>
+            <input type="number" placeholder="Enter employee age" id="Age" name="Age" />
+            <span class="error" style="color:aqua" id="AgeError"></span>
+        </div>
+
+        <button type="submit" class="form-group" ">Submit</button>
+
+    </form>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#Id").blur(function () {
+            var id = $(this).val();
+            if (id === "") {
+                $("#IdError").text("Enter ID value");
+            } else {
+                $("#IdError").text("");
+            }
+        });
+
+        $("#EmployeeName").blur(function () {
+            var name = $(this).val();
+            if (name === "") {
+                $("#NameError").text("EnterName");
+            } else {
+                $("#NameError").text("");
+            }
+        });
+
+        $("#Department").blur(function () {
+            var department = $(this).val();
+            if (department === "") {
+                $("#DepartmentError").text("Enter department");
+            } else {
+                $("#DepartmentError").text("");
+            }
+        });
+
+        $("#Salary").blur(function () {
+            var department = $(this).val();
+            if (department === "") {
+                $("#SalaryError").text("Enter salary");
+            } else {
+                $("#SalaryError").text("");
+            }
+        });
+
+        $("#Age").blur(function () {
+            var department = $(this).val();
+            if (department === "") {
+                $("#AgeError").text("Enter salary");
+            } else {
+                $("#AgeError").text("");
+            }
+        });
+
+    });
+
+</script>
+
+</html>
